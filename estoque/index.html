@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width-device-widht, initial-scale=1.0">
+
+        <!--CSS EXTERNO-->
+        <link rel="stylesheet" href="CSS/style.css">
+
+        <link rel="icon" type="image/png" href="IMG/Logo.png"/>
+        <title>Food & Grill</title>
+    </head>
+    
+    <body class="site">
+        
+        <!--cabeçalho-->
+    <header > 
+        <!--menu-->
+        <nav class="menu"> 
+          <li class="menu-logo"> <a href="../TCC/HTML/index.html"> <img src="IMG/Logo.png" width="50px"> </a></li> 
+          <li class="menu-title"> <a href=""> <h3>Food & Grill</h3> </a> </li>
+        </nav>
+      </div>
+    </header>
+
+    <!-- conteúdo do site-->
+    <article class="site-content">
+
+        <!--tabela de controle de estoque-->
+        <div class="mainContainer1">
+            <div class="outside">
+            <div class="sumir">
+                <div class="edit">
+                    <img src="img/botao-x.png" onclick="sumir()" class="X">
+                    <div class="col2">
+                        <img src="img/kids-burger-thumb.png">
+                        <button onclick="salvar()" class="btn"> Salvar </button>
+                    </div>
+                    <div class="col1">
+                        <form action = "http://10.0.1.72:1313/editar-produto" class="edit2">
+                            <input type="text" id="nomeProduto1"  placeholder="NOME:">
+                            <input type="number" id="quantProduto1" placeholder="QUANTIDADE:">
+                            <input type="number" id="precoProduto1" placeholder="PREÇO:">
+                            <input type="text" id="descricaoProduto1"  placeholder="DESCRIÇÃO:">
+                        </form>
+                    </div>
+                </div>  
+                </div>
+                <div class="out">
+                    <div class="mainContainer">
+                        <H5>Nome</H5>
+                        <div class="columns">
+                            <div class="col">
+                                <img src="IMG/kids-burger-thumb.png" class="img">
+                                <input type="button" value="EDITAR" class="btn1" onclick="aparecer()">
+                            </div>
+                            <div class="col1">
+                                <H6>99</H6>
+                                <H6>9.99</H6>
+                                <div class="etiqueta">disponível</div>
+                            </div>
+                        </div>
+                    </div> 
+             </div>   
+                </div>  
+            </div>
+
+            <!--container add produtos ao estoque-->
+        <div class="mainContainer2">
+            <div class="container1">
+
+                <div class="upperRow">
+                    <img src="IMG/bendejaContainer.png" width="3.5%">
+                    <h4> ADICIONAR PRODUTOS </h4> 
+                </div>
+                
+                <form action = "http://10.0.1.72:1313/gravar-produto">
+                    <div class="row1">
+                        <input type="text" id="nomeProduto" class="row1Input" placeholder="NOME:">
+                        <input type="number" id="quantProduto" class="row1Input" placeholder="QUANTIDADE:">
+    
+                        <label for="imgProduto">IMAGEM: <img src="IMG/upload-icon-22.png"> </label>
+                        <input type="file" name= "imgProduto" id="imgProduto" accept="image/*" class="row1Input">
+                    </div>
+    
+                    <div class="row2">
+                        <input type="text" id="descricaoProduto" class="desc" placeholder="DESCRIÇÃO:">
+                        <input type="number" id="precoProduto" class="preco" placeholder="PREÇO:">
+    
+                        <label for="produtos">TIPO:</label>
+                        <input list="opcoes" id="produtos" name="Produtos" class="opcoes"/>
+                        <datalist id="opcoes">
+                            <option value="Hamburguer">
+                            <option value="Bebida">
+                            <option value="Petisco">
+                            <option value="Sobremesa">
+                        </datalist>
+    
+                    </div>
+                    <input type="button" class="btn" value="ADICIONAR" onclick="pegarDados()">
+                </form>
+            </div>
+
+        </div>
+   
+
+    </article>
+
+        <!--JS EXTERNO-->
+        <script type="text/javascript" src="JS/java.js"></script>
+
+    </body>
+</html>
